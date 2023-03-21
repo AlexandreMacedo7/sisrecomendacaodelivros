@@ -24,7 +24,7 @@ public class Aluno {
     private String email;
     @NotNull
     private String fone;
-    @OneToMany(mappedBy = "aluno")
+    @OneToMany(mappedBy = "aluno", fetch = FetchType.LAZY)
     private List<AlunoLivroAvaliacao> listaAlunoLivroAvaliacao = new ArrayList<>();
 
 }
