@@ -2,11 +2,9 @@ package br.com.macedo.sisderecomendacao.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,9 +12,10 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 @Entity
 @Table(name = "alunos")
-public class Aluno {
+public class Aluno implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

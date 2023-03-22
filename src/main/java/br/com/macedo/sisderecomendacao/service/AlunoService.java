@@ -2,6 +2,7 @@ package br.com.macedo.sisderecomendacao.service;
 
 import br.com.macedo.sisderecomendacao.model.Aluno;
 import br.com.macedo.sisderecomendacao.repository.AlunoRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,8 +12,13 @@ import java.util.Optional;
 @Service
 public class AlunoService {
 
+
     @Autowired
     private AlunoRepository alunoRepository;
+
+    public AlunoService() {
+
+    }
 
     public Aluno salvarAluno(Aluno aluno){
         return alunoRepository.save(aluno);
