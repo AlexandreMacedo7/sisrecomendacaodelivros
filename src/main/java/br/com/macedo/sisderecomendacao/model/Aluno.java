@@ -22,9 +22,12 @@ public class Aluno implements Serializable {
     private Long id;
     @NotNull
     private String nome;
-    private String email;
+    private Integer matricurla;
     @NotNull
     private String fone;
+    private String serie;
+    private String turno;
+
     @OneToMany(mappedBy = "aluno", fetch = FetchType.LAZY)
     private List<AlunoLivroAvaliacao> listaAlunoLivroAvaliacao = new ArrayList<>();
 

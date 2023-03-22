@@ -20,7 +20,6 @@ public class Avaliacao {
     private Long id;
     @NotNull
     private Double nota;
-    private String comentario;
     @Column(name = "data_avaliacao")
     @NotNull
     private LocalDate dataAvaliacao;
